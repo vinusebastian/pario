@@ -1,0 +1,8 @@
+#   configs.py.sample
+#   Description:    ...
+
+DATABASE_NAME = 'PractoAuroraDB'
+DATABASE_HOST = 'localhost'
+DATABASE_PORT = 27017
+
+SHARED_API_SECRET_KEY = 'very-secret-string'
