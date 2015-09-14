@@ -29,6 +29,20 @@ def get_appointments(doctor_id):
             status=200
     )
 
+@app.route(
+     '/untrack/appointments/<appointment_id>',
+     methods=['PATCH']
+)
+def patch_appointment(appointment_id):
+    return Response(
+            dumps(
+                {
+                    'response' : AppointmentController.untrack_appointment(appointment_id)
+                }
+            ),
+            mimetype='application/json',
+            status=200
+    )
 
 @app.route(
      '/appointments',
